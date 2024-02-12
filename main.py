@@ -9,10 +9,11 @@ from sqlalchemy.orm import relationship
 from flask import g, request, redirect, url_for
 from products import Product
 from datetime import datetime
+import os
 
 # Setting up the flask app
 app = Flask(__name__, static_folder='static')
-app.config['SECRET_KEY'] = "pascal123"
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Bootstrap(app)
