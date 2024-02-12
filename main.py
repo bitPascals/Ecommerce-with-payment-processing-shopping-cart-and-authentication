@@ -15,7 +15,6 @@ app = Flask(__name__, static_folder='static')
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
-Bootstrap(app)
 
 # Setting up login manager
 login_manager = LoginManager(app)
