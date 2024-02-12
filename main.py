@@ -25,6 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///user
 db = SQLAlchemy()
 db.init_app(app)
 
+
 # Creating the User model
 class Users(UserMixin, db.Model):
     __tablename__ = "users"
