@@ -7,12 +7,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
 # Additional imports for admin-only decorator
 from flask import g, request, redirect, url_for
-from products import Product
 from datetime import datetime
+import os
 
 # Setting up the flask app
 app = Flask(__name__, static_folder='static')
-app.config['SECRET_KEY'] = "pascal123"
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Bootstrap(app)
@@ -25,10 +25,6 @@ login_manager.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy()
 db.init_app(app)
-
-# Setting up the products
-product1 = Product(name="Cleaning Material", price=int(10000),
-                   image="{{ url_for('static', filename='images/cleaning_product1.jpg') }}")
 
 
 # Creating the User model
