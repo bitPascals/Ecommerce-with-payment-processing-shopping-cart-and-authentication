@@ -1,0 +1,10 @@
+@app.route("/update_cart/<int:cart_id>", methods=["GET", "POST"])
+def update_cart(cart_id):
+    cart_item = db.get_or_404(CartItems, cart_id)
+    if request.method == "POST":
+        cart_item.quantity = request.form.get('quantity', type=int)
+        if cart_item.quantity < 1:
+            cart_item.quantity = 1
+        db.session.commit()
+        return redirect(url_for('cart'))
+    return render_template("cart.html", logged_in=current_user.is_authenticated)

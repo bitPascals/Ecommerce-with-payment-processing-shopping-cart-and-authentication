@@ -1,0 +1,227 @@
+.icon-hover-primary:hover {
+    border-color: #3b71ca !important;
+    background-color: white !important;
+}
+
+.icon-hover-primary:hover i {
+    color: #3b71ca !important;
+}
+
+.card.border.shadow-0{
+    margin-top: 0px;
+}
+
+.icon-hover-danger:hover {
+    border-color: #dc4c64 !important;
+    background-color: white !important;
+}
+
+.bg-primary.text-white.py-5{
+    background: #A78295 !important;
+}
+
+.btn.btn-primary.shadow-0.me-1{
+    background: #720455 !important;
+    border: 0px;
+}
+
+.quantity{
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    margin-right: 120px;
+    width: 161px;
+}
+
+.update_butt{
+    background: #F8F9FA !important;
+    border: 1.5px solid #DEDDDC !important;
+    color: #198754 !important;
+    border-radius: 3px;
+    padding: 4.5px 10px 4.5px 10px !important;
+    font-size: 15px;
+}
+
+.icon-hover-danger{
+    padding: 5px 10px 5px 10px; !important;
+    font-size: 15px;
+    margin-bottom: 4px;
+    margin-left: 12px;
+}
+
+#update_remove{
+    margin-top: 10px;
+}
+
+.icon-hover-danger:hover i {
+    color: #dc4c64 !important;
+}
+
+
+.search_button{
+    padding: 0px !important;
+    height: 40px !important;
+    padding: 0px 10px 0px 10px !important;
+    border: 1px solid #720455;
+    background: #720455;
+    width: 50px;
+    border-radius: 6px;
+    margin-top: 0px !important;
+}
+
+.pt-1{
+    color: #A78295
+}
+
+.card-footer.d-flex.align-items-end.pt-3.px-0.pb-0.mt-auto{
+     background: white !important;
+}
+
+.form-control {
+	height: 41px;
+	background: #f2f2f2;
+	box-shadow: none !important;
+	border: none;
+}
+.form-control:focus {
+	background: #e2e2e2;
+}
+.form-control, .btn {
+	border-radius: 3px;
+}
+.signup-form {
+	width: 400px;
+	margin: 30px auto;
+	margin-top: 40px !important;
+}
+.signup-form form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.signup-form h2  {
+	color: #333;
+	font-weight: bold;
+	margin-top: 0;
+}
+.signup-form hr  {
+	margin: 0 -30px 20px;
+}
+.signup-form .form-group {
+	margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"] {
+	margin-top: 3px;
+}
+.signup-form .row div:first-child {
+	padding-right: 10px;
+}
+.signup-form .row div:last-child {
+	padding-left: 10px;
+}
+.signup-form .btn {
+	font-size: 16px;
+	font-weight: bold;
+	background: #3598dc;
+	border: none;
+	min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+	background: #2389cd !important;
+	outline: none;
+}
+.signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: #3598dc;
+	text-decoration: none;
+}
+.signup-form form a:hover {
+	text-decoration: underline;
+}
+.signup-form .hint-text  {
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+#paymentForm {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Styling for form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  /* Styling for labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Styling for input fields */
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Styling for submit button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+
+.border.rounded.py-1.px-3.nav-link.d-flex.align-items-center{
+    margin-left: 5px !important;
+}
+
+
+.message{
+    color: white;
+    font-weight: semi-bold;
+    background: #89BF8B;
+    width: 23%;
+    border-radius: 5px;
+    padding: 6px 8px 6px 15px;
+}
+
+p.cart_length{
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background:#720455;
+    border-radius: 50%;
+    margin-left: 0px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+
+.divs{
+    padding-left: 0px !important;
+}
+
