@@ -22,7 +22,7 @@ login_manager = LoginManager(app)
 login_manager.init_app(app)
 
 # Setting up database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///users.db")
 db = SQLAlchemy()
 db.init_app(app)
 
@@ -249,4 +249,4 @@ def checkout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
