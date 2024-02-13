@@ -247,5 +247,14 @@ def checkout():
     return render_template("checkout.html", total=total_sum)
 
 
+@app.route("/product_detail/<int:product_id>")
+def product_detail(product_id):
+    requested_product = db.get_or_404(Product, product_id)
+    result_ = db.session.execute(db.select(CartItems).order_by(CartItems.product_id))
+    all_cart_items = result_.scalars().all()
+    length = len(all_cart_items)
+    return render_template("product_detail.html", cart_length=length, product=requested_product, logged_in=current_user.is_authenticated)
+
+
 if __name__ == "__main__":
     app.run(debug=False)
