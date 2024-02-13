@@ -185,7 +185,7 @@ def cart():
                            logged_in=current_user.is_authenticated)
 
 
-# Route app products to the cart
+# Route adds products to the cart
 @app.route("/add_to_cart/<int:product_id>", methods=["GET", "POST"])
 def add_to_cart(product_id):
     if not current_user.is_authenticated:
@@ -247,6 +247,7 @@ def checkout():
     return render_template("checkout.html", total=total_sum)
 
 
+# Route renders the product detail page
 @app.route("/product_detail/<int:product_id>")
 def product_detail(product_id):
     requested_product = db.get_or_404(Product, product_id)
@@ -256,5 +257,24 @@ def product_detail(product_id):
     return render_template("product_detail.html", cart_length=length, product=requested_product, logged_in=current_user.is_authenticated)
 
 
+# Route adds products to the cart from product detail page
+@app.route("/add_product_to_cart/<int:product_id>", methods=["GET", "POST"])
+def add_product_to_cart(product_id):
+    if not current_user.is_authenticated:
+        return redirect(url_for("login"))
+    product = Product.query.filter(Product.id == product_id).first()
+    cart_item = CartItems(product=product)
+    result = db.session.execute(db.select(CartItems).order_by(CartItems.product_id))
+    all_cart_items = result.scalars().all()
+    for item in all_cart_items:
+        if cart_item.product.id == item.product_id:
+            flash("Product already exists in your cart!")
+            return redirect(url_for("product_detail", product_id=product_id))
+    db.session.add(cart_item)
+    db.session.commit()
+    flash("Product has been added to your cart!")
+    return redirect(url_for("product_detail", product_id=product_id))
+
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

@@ -208,6 +208,15 @@
     padding: 6px 8px 6px 15px;
 }
 
+.message1{
+    color: white;
+    font-weight: semi-bold;
+    background: #89BF8B;
+    width: 50%;
+    border-radius: 5px;
+    padding: 6px 8px 6px 15px;
+}
+
 p.cart_length{
     font-size: 10px;
     font-weight: bold;
